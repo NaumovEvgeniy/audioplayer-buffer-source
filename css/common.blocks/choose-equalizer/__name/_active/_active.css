@@ -1,0 +1,5 @@
+.choose-equalizer__name_active {
+    color: #333333;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #eee 33%, #bbb 66%, #eeeeee 100%);
+}

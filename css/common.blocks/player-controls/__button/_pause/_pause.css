@@ -1,0 +1,11 @@
+.player-controls__button_pause::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(to right, #000 33%, transparent 33%, transparent 66%, #000 66%, #000 100%);
+}

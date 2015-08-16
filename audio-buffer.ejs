@@ -1,0 +1,53 @@
+<% layout('layout/layout')%>
+
+<%script('/scripts/audio-buffer/audio-buffer.js')%>
+<%script('/scripts/audio-buffer/taglib.js')%>
+
+<%block('linkCSS', '/css/audio-buffer/styles.css')%>
+
+<%block('title', 'Плеер на WEB Audio API')%>
+
+<h1 class="header">Реализация плеера на WEB Audio API &#124; <a href="/3-audio-source">Альтернативная реализация</a></h1>
+<p class="paragraph">В данной реализации плеера в качестве источника звука выступает буффер из декодированной песни. Он написан на чистом WEB Audio API.</p>
+<p class="paragraph">Я считаю, что в данной реализации плеер несовершенен. Например, если загрузить двухчасовую аудиокнигу весом более 100мб, она будет очень долго буфферизироваться.</p>
+<p class="paragraph"><a href="/3-audio-source">В контексте данного задания я подготовил альтернативную реализацию плеера на WEB Audio API, в которой источником звука выступает тэг &#60;audio&#62;. Я считаю его более совершенным, т.к. у него присутствует постепенная буфферизация, что позволяет загружать аудиофайлы любой длины и размера.</a></p>
+
+<div class="dragzone"></div>
+
+<input type="file" name="song" id="file" accept="audio/*" class="input-file"/>
+
+<div class="music-player">
+    <div class="music-player__wrapper-open-file">
+        <label for="file" id="openfile" class="button-input-file">ВЫБРАТЬ ПЕСНЮ С ЛОКАЛЬНОГО ДИСКА</label>
+        <span class="song-file">Проигрываемый файл</span>
+    </div>
+    <div class="song-info">
+        <span class="song-info__artist block">Артист</span>
+        <span class="song-info__title block">Название</span>
+    </div>
+    <div class="player-controls">
+        <button class="player-controls__button player-controls__button_play">PLAY</button>
+        <button class="player-controls__button player-controls__button_stop">STOP</button>
+    </div>
+
+    <div class="choose-equalizer">
+        <label class='choose-equalizer__name' for="jazzEQ">Jazz</label>
+        <input class='choose-equalizer__input' type="radio" name="equalize" id="jazzEQ" value="jazz" onclick="changeEQ(this, 'jazz')"/>
+
+        <label class='choose-equalizer__name' for="rockEQ">Rock</label>
+        <input class='choose-equalizer__input' type="radio" name="equalize" id="rockEQ" value="rock" onclick="changeEQ(this, 'rock')"/>
+
+        <label class='choose-equalizer__name' for="popEQ">Pop</label>
+        <input class='choose-equalizer__input' type="radio" name="equalize" id="popEQ" value="pop" onclick="changeEQ(this, 'pop')"/>
+
+        <label class='choose-equalizer__name' for="classicEQ">Classic</label>
+        <input class='choose-equalizer__input' type="radio" name="equalize" id="classicEQ" value="classic" onclick="changeEQ(this, 'classic')"/>
+
+        <label class='choose-equalizer__name' for="normalEQ">Normal</label>
+        <input class='choose-equalizer__input' type="radio" name="equalize" id="normalEQ"  value="normal" onclick="changeEQ(this, 'normal')"/>
+
+    </div>
+
+    <canvas class="visualization">
+    </canvas>
+</div>

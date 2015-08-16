@@ -1,0 +1,7 @@
+.music-player {
+    box-sizing: border-box;
+    border: 2px solid burlywood;
+    margin: 20px auto;
+    width: 700px;
+    min-width: 700px;
+}

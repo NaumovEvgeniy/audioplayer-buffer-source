@@ -1,0 +1,7 @@
+.player-controls__button {
+    display: inline-block;
+    padding: 15px 15px 15px 40px;
+    border: 2px solid #000000;
+    position: relative;
+    cursor: pointer;
+}

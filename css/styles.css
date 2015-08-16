@@ -1,0 +1,35 @@
+@import "common.blocks/html/html.css";
+
+@import "common.blocks/page/page.css";
+
+@import "common.blocks/block/block.css";
+
+@import "common.blocks/music-player/music-player.css";
+@import "common.blocks/music-player/__wrapper-open-file/__wrapper-open-file.css";
+
+@import "common.blocks/input-file/input-file.css";
+
+@import "common.blocks/button-input-file/button-input-file.css";
+
+@import "common.blocks/song-info/song-info.css";
+@import "common.blocks/song-info/__artist/__artist.css";
+@import "common.blocks/song-info/__title/__title.css";
+
+@import "common.blocks/song-file/song-file.css";
+
+@import "common.blocks/dragzone/dragzone.css";
+@import "common.blocks/dragzone/_hover/_hover.css";
+
+@import "common.blocks/player-controls/player-controls.css";
+@import "common.blocks/player-controls/__button/__button.css";
+@import "common.blocks/player-controls/__button/_disabled/_disabled.css";
+@import "common.blocks/player-controls/__button/_play/_play.css";
+@import "common.blocks/player-controls/__button/_stop/_stop.css";
+@import "common.blocks/player-controls/__button/_pause/_pause.css";
+
+@import "common.blocks/visualization/visualization.css";
+
+@import "common.blocks/choose-equalizer/choose-equalizer.css";
+@import "common.blocks/choose-equalizer/__input/__input.css";
+@import "common.blocks/choose-equalizer/__name/__name.css";
+@import "common.blocks/choose-equalizer/__name/_active/_active.css";

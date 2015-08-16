@@ -1,0 +1,8 @@
+.button-input-file {
+    display: block;
+    background-color: silver;
+    float: left;
+    box-sizing: border-box;
+    padding: 3px 5px;
+    border: 1px solid black;
+}

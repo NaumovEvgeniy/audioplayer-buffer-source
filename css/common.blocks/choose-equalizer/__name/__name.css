@@ -1,0 +1,5 @@
+.choose-equalizer__name {
+    display: inline-block;
+    padding: 3px 6px;
+    cursor: pointer;
+}
